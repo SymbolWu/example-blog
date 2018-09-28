@@ -10,3 +10,7 @@ The project is a personal blog and will be a SPA.
 ## Style
 - scss
 
+## Mock Vurial Data
+- mock.js
+
+
