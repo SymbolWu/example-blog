@@ -51,15 +51,15 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js Mock",
-    "start-Mock": "node scripts/start.js Mock",
-    "start-DevSer": "node scripts/start.js DevSer",
-    "start-PrdSer": "node scripts/start.js PrdSer",
+    "start": "node scripts/start.js MOCK",
+    "start-Mock": "node scripts/start.js MOCK",
+    "start-DevSer": "node scripts/start.js DEVSER",
+    "start-PrdSer": "node scripts/start.js PRDSER",
 
-    "build": "node scripts/build.js DevSer",
-    "build-Mock": "node scripts/build.js Mock", 
-    "build-DevSer": "node scripts/build.js DevSer",
-    "build-PrdSer": "node scripts/build.js PrdSer",
+    "build": "node scripts/build.js DEVSER",
+    "build-Mock": "node scripts/build.js MOCK", 
+    "build-DevSer": "node scripts/build.js DEVSER",
+    "build-PrdSer": "node scripts/build.js PRDSER",
 
     "test": "node scripts/test.js --env=jsdom"
   },
