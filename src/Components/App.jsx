@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class App extends Component {
   render() {
+    console.log('process',process.env);
     return (
       <div>
         <p>
