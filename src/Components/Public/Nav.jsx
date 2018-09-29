@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 
 class Nav extends Component {
     static propTypoes = {
-       menuList:PropTypes.array.isRequired 
+       menuList:PropTypes.array.isRequired,
+       fetchMenusRequest:PropTypes.func.isRequired 
+    }
+    componentDidMount(){
+        this.props.fetchMenusRequest();
     }
     render(){
         const {menuList} = this.props;
@@ -13,7 +17,7 @@ class Nav extends Component {
                     {
                         menuList.map((item,index)=>{
                             return(
-                                {/* <li key={item}></li> */}
+                                <li key={item.id}>{item.name}</li> 
                             )
                         })
                     }

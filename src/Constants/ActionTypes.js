@@ -1,0 +1,1 @@
+export const INIT_MENU_LIST = 'INIT_MENU_LIST';
