@@ -39,8 +39,8 @@
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-thunk": "^1.0.0",
     "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "resolve": "1.6.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -55,12 +55,10 @@
     "start-Mock": "node scripts/start.js MOCK",
     "start-DevSer": "node scripts/start.js DEVSER",
     "start-PrdSer": "node scripts/start.js PRDSER",
-
     "build": "node scripts/build.js DEVSER",
-    "build-Mock": "node scripts/build.js MOCK", 
+    "build-Mock": "node scripts/build.js MOCK",
     "build-DevSer": "node scripts/build.js DEVSER",
     "build-PrdSer": "node scripts/build.js PRDSER",
-
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {

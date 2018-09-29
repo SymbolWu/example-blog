@@ -4,7 +4,8 @@ import {fetchMenusRequest} from '../Redux/Actions/NavActions'
 import Nav from '../Components/Public/Nav'
 const mapStateToProps = (state)=>{
     return{
-        menuList:state.menuList
+        menuList:state.navMenu.menuList,
+        loading:state.navMenu.loading
     }
 }
 export default connect(mapStateToProps,{

@@ -1,8 +1,18 @@
 
 import{createStore,applyMiddleware} from 'redux'
 import rootReducer from '../Reducers/AllReducers'
-import thunk from 'react-thunk'
+import thunkMiddleware from 'redux-thunk'
 
-const store = createStore(rootReducer,applyMiddleware(thunk));
+const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 
-export default store
+export default function configureStore(initialState) {
+    const store = createStoreWithMiddleware(rootReducer, initialState);
+  
+    if (module.hot) {
+      module.hot.accept('../Reducers/AllReducers', () => {
+        store.replaceReducer(rootReducer);
+      });
+    }
+  
+    return store;
+  }

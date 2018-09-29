@@ -4,11 +4,11 @@ import {Provider} from 'react-redux'
 
 import App from './Components/App';
 import {mockData} from './Constants/MockConstants'
-import store from './Redux/Store/stores'
+import configureStore from './Redux/Store/stores'
 
 mockData();
 ReactDOM.render((
-    <Provider store={store}>
+    <Provider store={configureStore()}>
         <App />
     </Provider>
 ), document.getElementById('root'));

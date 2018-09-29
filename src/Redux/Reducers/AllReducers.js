@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
-import menuList from './NavReducers'
+import navMenu from './NavReducers'
 
 
 const rootReducer = combineReducers({
-    menuList
+    navMenu
 });
 
 export default rootReducer;
