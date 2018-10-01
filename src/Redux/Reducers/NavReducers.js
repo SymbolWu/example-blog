@@ -3,7 +3,7 @@ const initialState = {
     menuList:[],
     loading:true
 }
-function navMenu (state=initialState,action){
+const navMenu = (state=initialState,action)=>{
     switch(action.type){
         case type.INIT_MENU_LIST:
             return {

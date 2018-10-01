@@ -1,5 +1,6 @@
 import React ,{Component} from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 class Nav extends Component {
     static propTypoes = {
@@ -12,7 +13,6 @@ class Nav extends Component {
     }
     render(){
         const {menuList,loading} = this.props;
-        console.log('menuList:',menuList);
         if(loading){
             return(
                 <div>
@@ -22,15 +22,15 @@ class Nav extends Component {
         }else{
             return(
                 <div>
-                    <ul>
+                     <ul>
                         {
                             menuList.map((item,index)=>{
                                 return(
-                                    <li key={item.id}>{item.name}</li> 
+                                    <li key={item.id}><Link to={item.id==='0' ? '/' : `/${item.name}`} replace>{item.name}</Link></li> 
                                 )
                             })
                         }
-                    </ul>
+                    </ul> 
                 </div>
             )
         }
