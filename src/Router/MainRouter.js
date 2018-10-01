@@ -5,8 +5,8 @@ import {Switch,Route} from 'react-router-dom'
 import * as routePath from '../Constants/RouterConstants'
 
 import HomeContainer from '../Containers/HomeContainer'
-import ArticleComponent from '../Components/Article/ArticleComponent'
-import PhotographComponent from '../Components/Photograph/PhotographComponent'
+import ArticleContainer from '../Containers/ArticleContainer'
+import PhotographContainer from '../Containers/PhotographContainer'
 import AboutMeComponent from '../Components/AboutMe/AboutMeComponent'
 
 class MainRouter extends Component{
@@ -14,8 +14,8 @@ class MainRouter extends Component{
         return(
             <Switch>
                 <Route exact path={routePath.HOME_PATH} component={HomeContainer}/>
-                <Route  path={routePath.ARTICLE_PATH} component={ArticleComponent}/>
-                <Route  path={routePath.PHOTOGRAPH_PATH} component={PhotographComponent}/>
+                <Route  path={routePath.ARTICLE_PATH} component={ArticleContainer}/>
+                <Route  path={routePath.PHOTOGRAPH_PATH} component={PhotographContainer}/>
                 <Route  path={routePath.ABOUTME_PATH} component={AboutMeComponent}/>
             </Switch>
         )

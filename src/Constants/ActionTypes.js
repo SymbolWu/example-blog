@@ -1,2 +1,3 @@
 export const INIT_MENU_LIST = 'INIT_MENU_LIST';
 export const SET_ARTICLE_LIST = 'SET_ARTICLE_LIST';
+export const SET_ALBUM_LIST = 'SET_ALBUM_LIST';
