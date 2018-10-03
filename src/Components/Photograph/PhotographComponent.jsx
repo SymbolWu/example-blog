@@ -5,7 +5,12 @@ class PhotographComponent extends Component {
     static propType = {
         albumList: PropTypes.array.isRequired,
         albumloading: PropTypes.bool.isRequired,
-        fetchAllAlbumListRequest:PropTypes.func.isRequired
+        fetchAllAlbumListRequest:PropTypes.func.isRequired,
+        setAlbumList:PropTypes.func.isRequired
+    }
+    componentWillMount(){
+        const {setAlbumList} = this.props;
+        setAlbumList([],true);
     }
     componentDidMount(){
         const {fetchAllAlbumListRequest} =this.props;

@@ -5,7 +5,12 @@ class ArticleComponent extends Component {
     static propTypes = {
         articleList: PropTypes.array.isRequired,
         articleloading: PropTypes.bool.isRequired,
-        fetchAllArtilceListRequest: PropTypes.func.isRequired
+        fetchAllArtilceListRequest: PropTypes.func.isRequired,
+        setArticleList: PropTypes.func.isRequired
+    }
+    componentWillMount() {
+        const { setArticleList } = this.props;
+        setArticleList([], true);
     }
     componentDidMount() {
         const { fetchAllArtilceListRequest } = this.props;

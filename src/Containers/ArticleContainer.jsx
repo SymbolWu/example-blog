@@ -1,13 +1,14 @@
 import ArticleComponent from '../Components/Article/ArticleComponent'
-import {getArtilceList,getArtilceListLoading} from '../Selectors/ArticleSelector'
-import { fetchAllArtilceListRequest } from '../Redux/Actions/ArticleAction'
+import {getArticleList,getArticleListLoading} from '../Selectors/ArticleSelector'
+import { fetchAllArtilceListRequest,setArticleList } from '../Redux/Actions/ArticleAction'
 import {connect} from 'react-redux'
 const mapStateToProps =(state)=> {
     return{
-        articleList:getArtilceList(state),
-        articleloading:getArtilceListLoading(state)
+        articleList:getArticleList(state),
+        articleloading:getArticleListLoading(state)
     }
 }
 export default connect(mapStateToProps,{
-    fetchAllArtilceListRequest
+    fetchAllArtilceListRequest,
+    setArticleList
 })(ArticleComponent)

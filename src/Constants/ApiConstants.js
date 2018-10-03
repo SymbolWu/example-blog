@@ -4,3 +4,4 @@ export const QUERY_RECENTLY_ARTICLE_LIST_DO = `${host}queryRecentlyArticleList.d
 export const QUERY_RECENTLY_ALBUM_LIST_DO = `${host}queryRecentlyAlbumList.do`
 export const QUERY_ALL_ARTICLE_LIST_DO = `${host}queryAllArticleList.do`
 export const QUERY_ALL_ALBUM_LIST_DO = `${host}queryAllAlbumList.do`
+export const QUERY_SINGEL_ARTICLE_DO= `${host}querySingleArticle.do`

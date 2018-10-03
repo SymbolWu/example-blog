@@ -64,7 +64,9 @@
   },
   "devDependencies": {
     "mockjs": "^1.0.1-beta3",
-    "react-app-rewired": "^1.6.2"
+    "node-sass": "^4.9.3",
+    "react-app-rewired": "^1.6.2",
+    "sass-loader": "^7.1.0"
   },
   "jest": {
     "collectCoverageFrom": [

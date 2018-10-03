@@ -1,15 +1,15 @@
 import {connect} from 'react-redux'
 import HomeComponent from '../Components/Home/HomeComponent'
 
-import {getArtilceList,getArtilceListLoading} from '../Selectors/ArticleSelector'
+import {getArticleList,getArticleListLoading} from '../Selectors/ArticleSelector'
 import {getAlbumList,getAlbumLoading} from '../Selectors/PhotographSelector'
 
-import { fetchArtilceListRequest } from '../Redux/Actions/ArticleAction'
-import { fetchAlbumListRequest } from '../Redux/Actions/PhotographAction'
+import {  fetchArtilceListRequest,setArticleList } from '../Redux/Actions/ArticleAction'
+import { fetchAlbumListRequest,setAlbumList } from '../Redux/Actions/PhotographAction'
 const mapStateToProps = (state) =>{
     return{
-        articleList:getArtilceList(state),
-        articleloading:getArtilceListLoading(state),
+        articleList:getArticleList(state),
+        articleloading:getArticleListLoading(state),
 
         albumList: getAlbumList(state),
         albumloading: getAlbumLoading(state)
@@ -18,6 +18,8 @@ const mapStateToProps = (state) =>{
 }
 
 export default connect(mapStateToProps,{
+    setAlbumList,
+    setArticleList,
     fetchArtilceListRequest,
     fetchAlbumListRequest
 })(HomeComponent)

@@ -7,10 +7,18 @@ class HomeComponent extends Component {
         articleList:PropTypes.array.isRequired,
         articleloading:PropTypes.bool.isRequired,
         fetchArtilceListRequest:PropTypes.func.isRequired,
+        setArticleList:PropTypes.func.isRequired,
 
         albumList: PropTypes.array.isRequired,
         albumloading: PropTypes.bool.isRequired,
-        fetchAlbumListRequest:PropTypes.func.isRequired
+        fetchAlbumListRequest:PropTypes.func.isRequired,
+        setAlbumList:PropTypes.func.isRequired
+    ,
+    }
+    componentWillMount(){
+        const { setArticleList,setAlbumList } = this.props;
+        setArticleList([],true);
+        setAlbumList([],true);
     }
     componentDidMount(){
         const { fetchArtilceListRequest,fetchAlbumListRequest } = this.props;

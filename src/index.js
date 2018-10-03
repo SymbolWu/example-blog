@@ -7,6 +7,7 @@ import {mockData} from './Constants/MockConstants'
 import configureStore from './Redux/Store/stores'
 
 import 'babel-polyfill';
+import './Styles/main.scss'
 
 mockData();
 ReactDOM.render((

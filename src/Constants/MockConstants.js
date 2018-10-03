@@ -25,7 +25,16 @@ let mockData = () =>{
       Mock.mock(api.QUERY_ALL_ALBUM_LIST_DO,{
         "albumList|8":[{"cover":Random.image('200x200', Mock.mock('@color'), '#FFF', Mock.mock('@word(5)')),"id":'@id',"title":'@word(8)'}]
       });
-      
+      Mock.mock(RegExp(api.QUERY_SINGEL_ARTICLE_DO+".*"),'get',{
+        "articleBody":{
+          'id':'@id',
+          'title':'@title',
+          'author':'@name',
+          'authorAvatar':Random.image('50x50', Mock.mock('@color'), '#FFF', Mock.mock('@word(1)')),
+          'publishdate':'@datetime("yyyy-MM-dd A HH:mm:ss")',
+          'content':'@paragraph(10)'
+        }
+      })
       Mock.setup({ timeout: '1000-4000' });
     }
 }
