@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import PhotographComponent from '../Components/Photograph/PhotographComponent'
+import PhotographPageView from '../Components/Photograph/PhotographPageView'
 import { fetchAllAlbumListRequest,setAlbumList } from '../Redux/Actions/PhotographAction'
 import {getAlbumList,getAlbumLoading} from '../Selectors/PhotographSelector'
 const mapStateToProps = (state) =>{
@@ -11,4 +11,4 @@ const mapStateToProps = (state) =>{
 export default connect(mapStateToProps,{
     fetchAllAlbumListRequest,
     setAlbumList
-})(PhotographComponent)
+})(PhotographPageView)

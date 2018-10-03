@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import HomeComponent from '../Components/Home/HomeComponent'
+import HomePageView from '../Components/Home/HomePageView'
 
 import {getArticleList,getArticleListLoading} from '../Selectors/ArticleSelector'
 import {getAlbumList,getAlbumLoading} from '../Selectors/PhotographSelector'
@@ -22,4 +22,4 @@ export default connect(mapStateToProps,{
     setArticleList,
     fetchArtilceListRequest,
     fetchAlbumListRequest
-})(HomeComponent)
+})(HomePageView)

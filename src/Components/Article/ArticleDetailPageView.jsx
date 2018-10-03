@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class ArticleDetail extends Component {
+class ArticleDetailPageView extends Component {
     static propTypes = {
         id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
@@ -42,4 +42,4 @@ class ArticleDetail extends Component {
 
     }
 }
-export default ArticleDetail;
+export default ArticleDetailPageView;

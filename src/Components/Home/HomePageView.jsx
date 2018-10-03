@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
-import ArticleListForm from '../../Components/Article/ArticleListForm'
-import AlbumCollectionComponent from '../../Components/Photograph/AlbumCollectionComponent'
-class HomeComponent extends Component {
+import ArticleTableComponent from '../../Components/Article/ArticleTableComponent'
+import AlbumCollectionComponent from '../Photograph/AlbumCollectionComponent'
+class HomePageView extends Component {
     static propTypes ={
         articleList:PropTypes.array.isRequired,
         articleloading:PropTypes.bool.isRequired,
@@ -32,7 +32,7 @@ class HomeComponent extends Component {
                 {
                     articleloading 
                     ? <div>Article Loading...</div> 
-                    : <ArticleListForm 
+                    : <ArticleTableComponent 
                         articleList={articleList}
                         loading={articleloading}
                     />
@@ -52,4 +52,4 @@ class HomeComponent extends Component {
         )
     }
 }
-export default HomeComponent;
+export default HomePageView;

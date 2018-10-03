@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import ArticleDetail from '../Components/Article/ArticleDetail'
+import ArticleDetailPageView from '../Components/Article/ArticleDetailPageView'
 import { fetchSingleArticle } from '../Redux/Actions/ArticleAction'
 import {
     getArticleBodyLoading,
@@ -23,4 +23,4 @@ const mapStateToProps = (state) => {
 }
 export default connect(mapStateToProps, {
     fetchSingleArticle
-})(ArticleDetail);
+})(ArticleDetailPageView);

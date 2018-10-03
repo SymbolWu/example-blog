@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ArticleListForm from './ArticleListForm'
-class ArticleComponent extends Component {
+import ArticleTableComponent from './ArticleTableComponent'
+class ArticlePageView extends Component {
     static propTypes = {
         articleList: PropTypes.array.isRequired,
         articleloading: PropTypes.bool.isRequired,
@@ -21,7 +21,7 @@ class ArticleComponent extends Component {
         return articleloading
             ? <div>Loading...</div>
             : <div>
-                <ArticleListForm
+                <ArticleTableComponent
                     articleList={articleList}
                     loading={articleloading}
                 />
@@ -29,4 +29,4 @@ class ArticleComponent extends Component {
 
     }
 }
-export default ArticleComponent;
+export default ArticlePageView;
