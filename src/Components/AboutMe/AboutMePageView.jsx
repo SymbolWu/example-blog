@@ -1,8 +1,8 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 
 class AboutMePageView extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 AboutMeComponent
             </div>

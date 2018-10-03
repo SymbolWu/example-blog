@@ -1,18 +1,18 @@
 import * as type from '../../Constants/ActionTypes'
 const initialState = {
-    menuList:[],
-    loading:true
+    menuList: [],
+    loading: true
 }
-const navMenu = (state=initialState,action)=>{
-    switch(action.type){
+const navMenu = (state = initialState, action) => {
+    switch (action.type) {
         case type.INIT_MENU_LIST:
             return {
                 ...state,
-                menuList:action.menuList,
-                loading:action.loading
+                menuList: action.menuList,
+                loading: action.loading
             }
         default:
-            return  state;
+            return state;
     }
 }
 export default navMenu;

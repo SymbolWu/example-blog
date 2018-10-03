@@ -16,11 +16,6 @@ class MainRouter extends Component {
             <Switch>
                 <Route exact path={routePath.HOME_PATH} component={HomeContainer} />
 
-                {/* <Route exact path={routePath.ARTICLE_PATH} component={ArticleRoute} /> */}
-                {/* <Switch>
-                    <Route exact path={routePath.ARTICLE_PATH} component={ArticleContainer} />
-                    <Route path={routePath.ARTICLE_DETAIL_PATH} component={ArticleDetailContainer} />
-                </Switch> */}
                 <Route path={routePath.ARTICLE_PATH} component={ArticleContainer} />
                 <Route path={routePath.ARTICLE_DETAIL_PATH} component={ArticleDetailContainer} />
 

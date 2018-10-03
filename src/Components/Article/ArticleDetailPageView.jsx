@@ -14,13 +14,13 @@ class ArticleDetailPageView extends Component {
         fetchSingleArticle: PropTypes.func.isRequired
     }
     componentDidMount() {
-        let id = '123123123';
         const { fetchSingleArticle } = this.props;
-        fetchSingleArticle(id);
+        let articleId = this.props.match.params.id;
+        fetchSingleArticle(articleId);
     }
     render() {
         const { title, author, authorAvatar, publishdate, content, loading } = this.props;
-        console.log('ArticleDetailLoading:',loading);
+        console.log('ArticleDetailLoading:', loading);
         return loading
             ? <div>
                 Loading...
@@ -29,7 +29,7 @@ class ArticleDetailPageView extends Component {
                 <article>
                     <header>
                         <h1>{title}</h1>
-                        <img src={authorAvatar} alt={author}/>
+                        <img src={authorAvatar} alt={author} />
                         <p>{author}</p>
                         <p>
                             <time>{publishdate}</time>

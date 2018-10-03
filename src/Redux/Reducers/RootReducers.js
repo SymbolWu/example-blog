@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
 import navMenu from './NavReducers'
 import article from './ArticleReducer'
 import photograph from './PhotographReducer'
