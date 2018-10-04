@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
+import { Link } from 'react-router-dom'
+import { ALBUM_DETAIL_PATH } from '../../Constants/RouterConstants'
 class AlbumCollectionComponent extends Component {
     static propTypes = {
         albumList: PropTypes.array.isRequired,
@@ -17,9 +18,9 @@ class AlbumCollectionComponent extends Component {
                     {
                         albumList.map((item, index) => {
                             return <li key={item.id}>
-                                <ul>
+                                <ul> 
                                     <li><img src={item.cover} alt={item.title} /></li>
-                                    <li>{item.title}</li>
+                                    <li><Link to={ALBUM_DETAIL_PATH.replace(':id',item.id)}>{item.title}</Link></li>
                                 </ul>
                             </li>
                         })

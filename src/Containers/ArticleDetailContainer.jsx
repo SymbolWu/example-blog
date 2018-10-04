@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ArticleDetailPageView from '../Components/Article/ArticleDetailPageView'
-import { fetchSingleArticle } from '../Redux/Actions/ArticleAction'
+import { fetchSingleArticle,setSingleArticle } from '../Redux/Actions/ArticleAction'
 import {
     getArticleBodyLoading,
     getArticleBodyId,
@@ -22,5 +22,6 @@ const mapStateToProps = (state) => {
     }
 }
 export default connect(mapStateToProps, {
-    fetchSingleArticle
+    fetchSingleArticle,
+    setSingleArticle
 })(ArticleDetailPageView);

@@ -1,5 +1,6 @@
 export const HOME_PATH = '/'
 export const ARTICLE_PATH = '/Article'
-export const ARTICLE_DETAIL_PATH = '/ArticleDetail/:id'
+export const ARTICLE_DETAIL_PATH = '/Content/:id'
 export const PHOTOGRAPH_PATH = '/Photograph'
+export const ALBUM_DETAIL_PATH = '/Album/:id'
 export const ABOUTME_PATH = '/AboutMe'

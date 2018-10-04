@@ -8,6 +8,8 @@ import HomeContainer from '../Containers/HomeContainer'
 import ArticleContainer from '../Containers/ArticleContainer'
 import ArticleDetailContainer from '../Containers/ArticleDetailContainer'
 import PhotographContainer from '../Containers/PhotographContainer'
+import AlbumDetailContainer from '../Containers/AlbumDetailContainer'
+
 import AboutMePageView from '../Components/AboutMe/AboutMePageView'
 
 class MainRouter extends Component {
@@ -20,6 +22,7 @@ class MainRouter extends Component {
                 <Route path={routePath.ARTICLE_DETAIL_PATH} component={ArticleDetailContainer} />
 
                 <Route path={routePath.PHOTOGRAPH_PATH} component={PhotographContainer} />
+                <Route path={routePath.ALBUM_DETAIL_PATH} component={AlbumDetailContainer} />
 
                 <Route path={routePath.ABOUTME_PATH} component={AboutMePageView} />
             </Switch>

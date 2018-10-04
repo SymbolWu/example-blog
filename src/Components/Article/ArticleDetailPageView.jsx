@@ -13,6 +13,17 @@ class ArticleDetailPageView extends Component {
         loading: PropTypes.bool.isRequired,
         fetchSingleArticle: PropTypes.func.isRequired
     }
+    componentWillMount() {
+        const { setSingleArticle } = this.props;
+        setSingleArticle({
+            id: '',
+            title: '',
+            author: '',
+            authorAvatar: '',
+            publishdate: '',
+            content: '',
+        }, true);
+    }
     componentDidMount() {
         const { fetchSingleArticle } = this.props;
         let articleId = this.props.match.params.id;
