@@ -1,0 +1,35 @@
+.footer{
+    width: 60%;
+    font-size: 0.2rem;
+    //display: inline-block;
+    margin-top: 0.85rem;
+    margin-bottom: 0.96rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 13.2rem;
+
+    //text-align: center;
+
+    & section{
+        width: 50%;
+        float: left;
+        // padding-left:0.5rem;
+        // padding-right:0.5rem;  
+        & header {
+            color: #999;
+            font-size: 0.14rem;
+            margin-bottom: 0.14rem;
+        }
+        & p{
+            font-size: 0.14rem;
+            line-height: 0.22rem;
+            color: #333;
+        }
+    }
+    & span {
+        color: #999;
+        font-size: 0.12rem;
+        text-align: center;
+        margin-top: 0.6rem;
+    }
+}

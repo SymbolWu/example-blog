@@ -1,0 +1,30 @@
+.articleList{
+    text-align: center;
+    
+    ul{
+        list-style:none; /* 去掉ul前面的符号 */
+        & li ul li{
+            margin-top: 0.05rem;
+        }
+    }
+    & a,& a:visited{
+        font-size: 0.25rem;
+        font-weight:700;
+        text-decoration: none;
+        color: #333;
+    }
+    & a:hover{
+        color: $mainGreen;
+    }
+    .description{
+        font-size: 0.18rem;
+        color: #666;
+    }
+    .date{
+        font-size: 0.14rem;
+        color: #666;
+    }
+    .item{
+        margin-bottom: 0.27rem;
+    }
+}

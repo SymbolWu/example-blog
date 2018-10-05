@@ -1,0 +1,48 @@
+.albumCollection{
+    width: 88%;
+    margin-top: 0.55rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1320px;
+
+    img{
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        opacity:0.8;
+    }
+    a{
+        background: #222;
+        position: relative;
+        display: block;
+        transition: opacity 0.3s ease;
+        text-decoration:none;
+        span{
+            font-family: "brandon-grotesque", Brandon Grotesque, Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            text-align:center;
+            top: 50%;
+            margin-top:-0.2rem;
+            display: inherit;
+            &:nth-child(2){
+                font-size: 0.40rem;
+                font-weight: 500;
+            }
+            &:nth-child(3){
+                top: 60%;
+                margin-top:0.05rem; 
+                font-size: 0.14rem;
+            }
+        }
+    }
+    @media only screen and (min-width: 920px){
+        ul li{
+            width: 50%;
+            float: left;
+            
+        }
+    }
+}

@@ -11,7 +11,7 @@ The project is a personal blog and will be a SPA.
 - scss
 
 ## Mock Vurial Data
-- mock.js
+- mock.js (如果请求带参数的话，api需要用正则转换一下)
 
 ## package.json scripts comment 
 ```
@@ -25,6 +25,7 @@ The project is a personal blog and will be a SPA.
 - "build-DevSer": "node scripts/build.js DevSer",   //打包数据使用开发服务器   可用于UAT SIT
 - "build-PrdSer": "node scripts/build.js PrdSer",   //打包数据使用生产服务器   用于正式发布
 ```
+
 
 
 

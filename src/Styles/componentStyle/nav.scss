@@ -1,0 +1,42 @@
+.nav{
+    font-size: 0.20rem;
+    font-weight: 600;
+    width: 100%;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "freight-sans-pro", freightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    & a,& a:visited{
+        text-decoration: none;
+        // display: block;
+        color: #333;
+    }
+    & a:hover{
+        color: #0fb7b7;
+    }
+
+    & ul{
+        float: right;
+        list-style: none;
+        margin: 0rem;
+        padding: 0rem;
+        width: auto;
+        & li{
+            float: right;
+            margin-left: 0.13rem;
+        }
+    }
+    & .logo{
+        width: 0.3rem;
+        display: inline-block;
+    }
+    & .thirdLink{
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+        float: right;
+        & a{
+            margin-left: 0.1rem
+        }
+    }
+}

@@ -33,6 +33,7 @@ class AlbumDetailPageView extends Component {
     }
     render() {
         const { id, albumName, picList, buildDate, buildBy, loading, builderAvatar } = this.props;
+        console.log('id:',id);
         return loading
             ? <div>
                 Loading...

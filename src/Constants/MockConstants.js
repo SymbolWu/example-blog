@@ -7,14 +7,18 @@ let mockData = () => {
     let Mock = require('mockjs');
     //定义Mock数据
     Mock.mock(api.QUERY_MENULIST_DO, {
-      menuList: [{ id: '0', name: 'Home' }, { id: '1', name: 'Article' }, { id: '2', name: 'Photograph' }, { id: '3', name: 'AboutMe' }]
+      menuList: [{ id: '0',code:0, name: 'Home',label:'Home' }, { id: '1',code:1, name: 'Article',label:'Blog' }, { id: '2',code:2, name: 'Photograph',label:'Pics' }, { id: '3',code:3, name: 'AboutMe',label:'About' }]
+    });
+    Mock.mock(RegExp(api.QUERY_PAGE_HEADER_DO + ".*") ,'get',{
+      //@capitalize(@word(5))
+      "pageHeaderContent":{id:"@id",pageName:'@capitalize(@word)',pageDescription:'@paragraph(2)'}
     });
     //article
     Mock.mock(api.QUERY_RECENTLY_ARTICLE_LIST_DO, {
-      "articleList|5": [{ "name": '@title', "id": '@id', "publishdate": '@datetime("yyyy-MM-dd A HH:mm:ss")' }]
+      "articleList|5": [{ "name": '@title', "id": '@id', "publishdate": '@datetime("yyyy-MM-dd A HH:mm:ss")',"description":'@sentence(3, 5)'}]
     })
     Mock.mock(api.QUERY_ALL_ARTICLE_LIST_DO, {
-      "articleList|30": [{ "name": '@title', "id": '@id', "publishdate": '@datetime("yyyy-MM-dd A HH:mm:ss")' }]
+      "articleList|30": [{ "name": '@title', "id": '@id', "publishdate": '@datetime("yyyy-MM-dd A HH:mm:ss")',"description":'@sentence(3, 5)'}]
     })
     Mock.mock(RegExp(api.QUERY_SINGEL_ARTICLE_DO + ".*"), 'get', {
       "articleBody": {
@@ -29,10 +33,10 @@ let mockData = () => {
 
     //photo
     Mock.mock(api.QUERY_RECENTLY_ALBUM_LIST_DO, {
-      "albumList|4": [{ "cover": Random.image('200x200', Mock.mock('@color'), '#FFF', Mock.mock('@word(5)')), "id": '@id', "title": '@word(8)' }]
+      "albumList|4": [{ "cover": Random.image('1962x1320', Mock.mock('@color'), '#FFF'), "id": '@id', "title": '@capitalize(@word)',"description":'@sentence(3, 5)' }]
     });
     Mock.mock(api.QUERY_ALL_ALBUM_LIST_DO, {
-      "albumList|8": [{ "cover": Random.image('200x200', Mock.mock('@color'), '#FFF', Mock.mock('@word(5)')), "id": '@id', "title": '@word(8)' }]
+      "albumList|8": [{ "cover": Random.image('1962x1320', Mock.mock('@color'), '#FFF'), "id": '@id', "title": '@capitalize(@word)',"description":'@sentence(3, 5)'}]
     });
     Mock.mock(RegExp(api.QUERY_SINGEL_ALBUM_DO + ".*"), 'get', {
       "albumBody": {
@@ -49,12 +53,13 @@ let mockData = () => {
         'buildDate':'@datetime("yyyy-MM-dd A HH:mm:ss")',
         'buildBy':'@name',
         'builderAvatar': Random.image('50x50', Mock.mock('@color'), '#FFF', Mock.mock('@word(1)')),
+        "description":'@sentence(3, 5)'
       }
     });
 
     
     //timeout
-    Mock.setup({ timeout: '1000-4000' });
+    //Mock.setup({ timeout: '1000-4000' });
   }
 }
 export { mockData }

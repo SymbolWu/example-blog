@@ -1,5 +1,6 @@
 import { host } from './HostConstants'
 export const QUERY_MENULIST_DO = `${host}queryMenuList.do`
+export const QUERY_PAGE_HEADER_DO = `${host}queryPageHeader.do`
 
 //article
 export const QUERY_RECENTLY_ARTICLE_LIST_DO = `${host}queryRecentlyArticleList.do`
