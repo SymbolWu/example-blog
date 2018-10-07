@@ -1,0 +1,26 @@
+.backTop{
+    display: inline-block;
+    text-align: center;
+    font-size: 0.16rem;
+    position: fixed;
+    background-color: darkslategrey;
+    color: whitesmoke;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius:0.2rem;
+    z-index: 998; /*置于顶层*/
+
+    top: 85%;
+    right: 2%;
+
+    opacity: 0;
+    transition: all 0.6s ease; /*动画效果*/
+
+    & :focus{
+        border: 0rem;
+    }
+}
+.show{
+    opacity: 1;
+    transition: all 0.6s ease;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MainRouter from '../Router/MainRouter'
 import NavContainers from '../Containers/NavContainers'
 import FooterComponent from '../Components/Public/FooterComponent'
+import BackTopComponent from '../Components/Public/BackTopComponent'
 class App extends Component {
   render() {
     return (
@@ -9,6 +10,7 @@ class App extends Component {
         <NavContainers />
         <MainRouter />
         <FooterComponent />
+        <BackTopComponent />
       </div>
     );
   }

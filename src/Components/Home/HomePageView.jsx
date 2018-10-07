@@ -26,9 +26,9 @@ class HomePageView extends Component {
         setArticleList([], true);
         setAlbumList([], true);
         setPageHeader({
-            pageName:'',
-            pageDescription:''
-        },true);
+            pageName: '',
+            pageDescription: ''
+        }, true);
     }
     componentDidMount() {
         const { fetchArtilceListRequest, fetchAlbumListRequest, fetchPageHeaderRequest } = this.props;
@@ -48,6 +48,19 @@ class HomePageView extends Component {
         } = this.props;
         return (
             <div className='home'>
+
+                <div className='homePic'>
+                    <div className='blackMask'>
+                        <header>
+                            <section>
+                                <h1>Random</h1>
+                                <aside>hahaha</aside>
+                            </section>
+                        </header>
+                    </div>
+
+
+                </div>
                 <div className='homePageHeader'>
                     {
                         pageHeaderloading
