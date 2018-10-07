@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-
+import {LINKEDIN} from '../../Constants/ThirdLink'
 class Nav extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +16,9 @@ class Nav extends Component {
     }
     componentDidMount() {
         this.props.fetchMenusRequest();
+
+        let path = this.props.location;
+        console.log('Path:',path);
         //给页面绑定滑轮滚动事件 
         if (document.addEventListener) {//firefox 
             document.addEventListener('DOMMouseScroll', this.scrollFunc, false);
@@ -43,6 +46,7 @@ class Nav extends Component {
                 this.setState({ navStyle: 'nav hidden' });
             }
         }
+        //console.log('window.scrollTo',document.documentElement.scrollTop);
     }
 
     render() {
@@ -57,7 +61,7 @@ class Nav extends Component {
                     <Link to={'/'}>S</Link>
                 </div>
                 <div className='thirdLink'>
-                    <a href='https://www.linkedin.com/in/Xinbo-Wu-49b68a170'>IN</a>
+                    <a href={LINKEDIN}>IN</a>
                 </div>
                 <ul>
                     {

@@ -1,0 +1,1 @@
+export const LINKEDIN = 'https://www.linkedin.com/in/Xinbo-Wu-49b68a170';

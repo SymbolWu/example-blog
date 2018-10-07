@@ -35,6 +35,9 @@ class HomePageView extends Component {
         fetchArtilceListRequest();
         fetchAlbumListRequest();
         fetchPageHeaderRequest();
+
+        let path = this.props.location;
+        console.log('Path:',path);
     }
     render() {
         const {
@@ -53,8 +56,8 @@ class HomePageView extends Component {
                     <div className='blackMask'>
                         <header>
                             <section>
-                                <h1>Random</h1>
-                                <aside>hahaha</aside>
+                                <h1>I am Wu Xinbo</h1>
+                                <aside>Hola! The quiet world!</aside>
                             </section>
                         </header>
                     </div>
