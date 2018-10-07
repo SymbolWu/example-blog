@@ -1,0 +1,36 @@
+@mixin clearfix{
+    &:after{
+        content: ".";         /*生成内容作为最后一个元素，至于content里面是什么没有影响*/
+        display: block;       /*使得生成的元素以块级元素显示，占满剩余空间*/
+        height: 0;            /*避免生成的内容破坏原有空间的高度*/
+        clear: both;          /*闭合浮动*/
+        visibility: hidden;
+    }
+}
+@mixin boxCenter {
+
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+  
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+  
+    display: -o-box;
+    -o-box-orient: horizontal;
+    -o-box-pack: center;
+    -o-box-align: center;
+  
+    display: -ms-box;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+  
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: center;
+}

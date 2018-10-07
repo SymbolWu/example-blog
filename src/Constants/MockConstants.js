@@ -23,7 +23,8 @@ let mockData = () => {
     Mock.mock(RegExp(api.QUERY_SINGEL_ARTICLE_DO + ".*"), 'get', {
       "articleBody": {
         'id': '@id',
-        'title': '@title',
+        'title': '@title(3)',
+        'description':'@sentence(3, 5)',
         'author': '@name',
         'authorAvatar': Random.image('50x50', Mock.mock('@color'), '#FFF', Mock.mock('@word(1)')),
         'publishdate': '@datetime("yyyy-MM-dd A HH:mm:ss")',
@@ -43,7 +44,7 @@ let mockData = () => {
         'id': '@id',
         'albumName': '@word(10)',
         "picList|20": [{
-          "picURL": Random.dataImage('100x100'),
+          "picURL": Random.dataImage('200x400'),
           "id": '@id',
           "title": '@word(8)',
           "description": '@sentence',

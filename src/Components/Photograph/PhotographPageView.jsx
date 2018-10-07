@@ -61,16 +61,6 @@ class PhotographComponent extends Component {
                 </div>
             </div>
         )
-        // return albumloading
-        //     ? <div>
-        //         Loading...
-        //     </div>
-        //     : <div>
-        //         < AlbumCollectionComponent
-        //             albumList={albumList}
-        //             loading={albumloading}
-        //         />
-        //     </div>
     }
 }
 export default PhotographComponent;

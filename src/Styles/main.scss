@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
 @import 'componentStyle/global.scss';
 @import 'componentStyle/nav.scss';
@@ -9,7 +10,8 @@
 
 @import 'componentStyle/article.scss';
 @import 'componentStyle/articleList.scss';
+@import 'componentStyle/articleDetail.scss';
 
 @import 'componentStyle/photogragh.scss';
 @import 'componentStyle/albumCollection.scss';
-
+@import 'componentStyle/albumDetail.scss';

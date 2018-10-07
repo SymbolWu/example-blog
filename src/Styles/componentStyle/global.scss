@@ -1,5 +1,6 @@
 body{
     font-family: $fontFamily;
+    margin: 0rem;
     *{
         margin:0;
         padding:0
@@ -10,16 +11,5 @@ body{
     img{
         vertical-align:top;
         border:none;
-    }
-    #root{
-        zoom: 1;
-        &::after{
-            content:'';
-            display:block;
-            height:0;
-            font-size:0;
-            clear:both;
-            overflow:hidden;
-        }
     }
 }

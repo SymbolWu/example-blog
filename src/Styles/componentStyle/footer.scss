@@ -1,35 +1,55 @@
 .footer{
-    width: 60%;
+    
+    width: 100%;
     font-size: 0.2rem;
-    //display: inline-block;
     margin-top: 0.85rem;
     margin-bottom: 0.96rem;
-    margin-left: auto;
-    margin-right: auto;
+    
     max-width: 13.2rem;
-
+    padding-top: 0.8rem;
+    //display: inline-block;
     //text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.068);
 
-    & section{
-        width: 50%;
-        float: left;
-        // padding-left:0.5rem;
-        // padding-right:0.5rem;  
-        & header {
-            color: #999;
-            font-size: 0.14rem;
-            margin-bottom: 0.14rem;
+    & .footTop{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        @include clearfix;
+
+        & section{
+            width: 47.5%;
+            float: left;
+            & header {
+                color: #999;
+                font-size: 0.14rem;
+                margin-bottom: 0.14rem;
+            }
+            & p{
+                font-size: 0.12rem;
+                line-height: 0.22rem;
+                color: #333;
+                & a,& a:visited{
+                    color: #333;
+                }
+                & a:hover{
+                    color: $mainGreen;
+                }
+            }
+            &:nth-child(2){
+                margin-left: 5%;
+            }
         }
-        & p{
-            font-size: 0.14rem;
-            line-height: 0.22rem;
-            color: #333;
-        }
+    
     }
-    & span {
+    & .footBottom{
+        margin-top: 0.9rem;
         color: #999;
-        font-size: 0.12rem;
+        font-size: 0.11rem;
         text-align: center;
-        margin-top: 0.6rem;
+        margin-left: auto;
+        margin-right: auto
+        
     }
+    
 }

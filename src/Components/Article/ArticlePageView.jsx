@@ -60,14 +60,6 @@ class ArticlePageView extends Component {
                 </div>
             </div>
         )
-        // return articleloading
-        //     ? <div>Loading...</div>
-        //     : <ArticleListComponent
-        //         articleList={articleList}
-        //         loading={articleloading}
-        //     />
-
-
     }
 }
 export default ArticlePageView;

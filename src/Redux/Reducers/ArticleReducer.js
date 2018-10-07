@@ -7,6 +7,7 @@ const initialState = {
 
     articleId: 'Loading...',
     articleTitle: 'Titile Loading...',
+    articleDescription: 'Titile Loading...',
     articleAuthor: 'Author Loading...',
     articleAuthorAvatar: 'Avatar Loading...',
     articlePublishdate: 'PublishDate Loading...',
@@ -27,6 +28,7 @@ const article = (state = initialState, action) => {
                 ...state,
                 articleId: action.articleBody.id,
                 articleTitle: action.articleBody.title,
+                articleDescription:action.articleBody.description,
                 articleAuthor: action.articleBody.author,
                 articleAuthorAvatar: action.articleBody.authorAvatar,
                 articlePublishdate: action.articleBody.publishdate,

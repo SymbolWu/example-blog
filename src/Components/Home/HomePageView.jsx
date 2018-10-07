@@ -57,7 +57,6 @@ class HomePageView extends Component {
                                 pageDescription={pageDescription}
                             />
                     }
-
                 </div>
                 <h1>Recent Article</h1>
                 <div className='homeArticle'>
@@ -80,11 +79,8 @@ class HomePageView extends Component {
                                 albumList={albumList}
                                 loading={albumloading}
                             />
-
                     }
                 </div>
-
-
             </div>
         )
     }

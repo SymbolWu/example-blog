@@ -5,6 +5,7 @@ import {
     getArticleBodyLoading,
     getArticleBodyId,
     getArticleBodyTitle,
+    getArticleBodyDescription,
     getArticleBodyAuthor,
     getArticleBodyAuthorAvatar,
     getArticleBodyPublishdate,
@@ -14,6 +15,7 @@ const mapStateToProps = (state) => {
     return {
         id: getArticleBodyId(state),
         title: getArticleBodyTitle(state),
+        description:getArticleBodyDescription(state),
         author: getArticleBodyAuthor(state),
         authorAvatar: getArticleBodyAuthorAvatar(state),
         publishdate: getArticleBodyPublishdate(state),

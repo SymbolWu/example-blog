@@ -11,7 +11,8 @@ class ArticleDetailPageView extends Component {
         content: PropTypes.string.isRequired,
         // articleBody:PropTypes.object.isRequired,
         loading: PropTypes.bool.isRequired,
-        fetchSingleArticle: PropTypes.func.isRequired
+        fetchSingleArticle: PropTypes.func.isRequired,
+        description: PropTypes.string.isRequired
     }
     componentWillMount() {
         const { setSingleArticle } = this.props;
@@ -22,6 +23,7 @@ class ArticleDetailPageView extends Component {
             authorAvatar: '',
             publishdate: '',
             content: '',
+            description: ''
         }, true);
     }
     componentDidMount() {
@@ -30,26 +32,35 @@ class ArticleDetailPageView extends Component {
         fetchSingleArticle(articleId);
     }
     render() {
-        const { title, author, authorAvatar, publishdate, content, loading } = this.props;
-        console.log('ArticleDetailLoading:', loading);
+        const { title, author, authorAvatar, publishdate, content, loading, description } = this.props;
+        console.log('authorAvatar:', authorAvatar, ' author:', author);
         return loading
             ? <div>
                 Loading...
               </div>
-            : <div>
+            : <div className='articleDetail'>
                 <article>
-                    <header>
-                        <h1>{title}</h1>
-                        <img src={authorAvatar} alt={author} />
-                        <p>{author}</p>
-                        <p>
-                            <time>{publishdate}</time>
-                        </p>
-                    </header>
-                    <p>{content}</p>
+
+                    <div className='headerContainer'>
+                        <header>
+                            <section>
+                                <h1>{title}</h1>
+                                <aside>{description}</aside>
+                                {/* <img src={authorAvatar} alt={author} />
+                                <p>{author}</p> */}
+                                <time>{publishdate}</time>
+                            </section>
+                        </header>
+                    </div>
+                    <div className='content'>
+                        <p>{content}</p>
+                    </div>
+                    <div className='articleFooter'>
+                        <h1>END</h1>
+                    </div>
+
                 </article>
             </div>
-
 
     }
 }
