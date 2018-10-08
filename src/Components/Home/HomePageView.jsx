@@ -37,7 +37,7 @@ class HomePageView extends Component {
         fetchPageHeaderRequest();
 
         let path = this.props.location;
-        console.log('Path:',path);
+        console.log('Path:', path);
     }
     render() {
         const {
@@ -51,7 +51,9 @@ class HomePageView extends Component {
         } = this.props;
         return (
             <div className='home'>
-
+                {/**
+                 * Home header 
+                 */}
                 <div className='homePic'>
                     <div className='blackMask'>
                         <header>
@@ -61,9 +63,11 @@ class HomePageView extends Component {
                             </section>
                         </header>
                     </div>
-
-
                 </div>
+
+                {/**
+                 * Home content header 
+                 */}
                 <div className='homePageHeader'>
                     {
                         pageHeaderloading
@@ -74,6 +78,10 @@ class HomePageView extends Component {
                             />
                     }
                 </div>
+
+                {/**
+                 * Recent Article
+                 */}
                 <h1>Recent Article</h1>
                 <div className='homeArticle'>
                     {
@@ -86,6 +94,10 @@ class HomePageView extends Component {
 
                     }
                 </div>
+
+                {/**
+                 * Recent Album
+                 */}
                 <h1>Recent Album</h1>
                 <div className='homePhoto'>
                     {
@@ -97,6 +109,7 @@ class HomePageView extends Component {
                             />
                     }
                 </div>
+
             </div>
         )
     }

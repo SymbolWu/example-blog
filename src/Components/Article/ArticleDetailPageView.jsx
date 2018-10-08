@@ -9,7 +9,6 @@ class ArticleDetailPageView extends Component {
         authorAvatar: PropTypes.string.isRequired,
         publishdate: PropTypes.string.isRequired,
         content: PropTypes.string.isRequired,
-        // articleBody:PropTypes.object.isRequired,
         loading: PropTypes.bool.isRequired,
         fetchSingleArticle: PropTypes.func.isRequired,
         description: PropTypes.string.isRequired

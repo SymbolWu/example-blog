@@ -1,4 +1,4 @@
-@mixin clearfix{
+@mixin clearfix{/*解决高度塌陷*/
     &:after{
         content: ".";         /*生成内容作为最后一个元素，至于content里面是什么没有影响*/
         display: block;       /*使得生成的元素以块级元素显示，占满剩余空间*/
@@ -7,7 +7,7 @@
         visibility: hidden;
     }
 }
-@mixin boxCenter {
+@mixin boxCenter {/*宽高居中*/
 
     display: -webkit-box;
     -webkit-box-orient: horizontal;

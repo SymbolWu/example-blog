@@ -8,13 +8,19 @@ The project is a personal blog and will be a SPA.
 - React-redux
 - React-router-dom
 
+## Third Library
+- prop-types : Propos check
+- axios : data request
+- react-masonry-component : picture layout
+- redux-thunk : async in redux
+
 ## Style
 - scss
 
 ## Mock Vurial Data
 - mock.js (如果请求带参数的话，api需要用正则转换一下)
 
-## package.json scripts comment 
+## Package.json scripts comment 
 ```
 - "start": "node scripts/start.js Mock",            //开发环境 默认运行Mock数据
 - "start-Mock": "node scripts/start.js Mock",       //开发环境 运行Mock数据host
@@ -27,6 +33,11 @@ The project is a personal blog and will be a SPA.
 - "build-PrdSer": "node scripts/build.js PrdSer",   //打包数据使用生产服务器   用于正式发布
 ```
 
+## File Name rule
+- Components
+    - Xxx.jsx : React Code
+    - XxxComponent.jsx : little component ,part of Page View
+    - XxxPageView : Page component , as a container of component
 
 
 

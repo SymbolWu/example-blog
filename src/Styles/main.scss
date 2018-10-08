@@ -2,19 +2,25 @@
 @import 'mixin.scss';
 
 @import 'componentStyle/global.scss';
+
+//public style
 @import 'componentStyle/nav.scss';
 @import 'componentStyle/footer.scss';
 @import 'componentStyle/pageHeader.scss';
 @import 'componentStyle/backTop.scss';
 
+//home style
 @import 'componentStyle/home.scss';
 
+//article style
 @import 'componentStyle/article.scss';
 @import 'componentStyle/articleList.scss';
 @import 'componentStyle/articleDetail.scss';
 
+//album style
 @import 'componentStyle/photogragh.scss';
 @import 'componentStyle/albumCollection.scss';
 @import 'componentStyle/albumDetail.scss';
 
+//about style
 @import 'componentStyle/aboutMe.scss';

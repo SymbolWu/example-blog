@@ -31,20 +31,7 @@ class ArticleListComponent extends Component {
                         })
                     }
                 </ul>
-                {/* <table>
-                    <tbody>
-                        {
-                            articleList.map((item, index) => {
-                                return (
-                                    <tr key={item.id}>
-                                        <td><Link to={ARTICLE_DETAIL_PATH.replace(":id", item.id)}>{item.name}</Link></td>
-                                        <td>{item.publishdate}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table> */}
+
             </div>
 
     }
