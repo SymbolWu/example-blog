@@ -21,6 +21,7 @@ class PhotographComponent extends Component {
             pageName: '',
             pageDescription: ''
         }, true);
+        console.log('this.props.location.pathname:',this.props.location.pathname);
     }
     componentDidMount() {
         const { fetchAllAlbumListRequest, fetchPageHeaderRequest } = this.props;

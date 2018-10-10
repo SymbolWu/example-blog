@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import ArticleListComponent from '../Article/ArticleListComponent'
 import AlbumCollectionComponent from '../Photograph/AlbumCollectionComponent'
 import PageHeaderComponent from '../Public/PageHeaderComponent'
+
+import PubSub from 'pubsub-js'
 class HomePageView extends Component {
     static propTypes = {
         pageName: PropTypes.string.isRequired,
@@ -36,8 +38,11 @@ class HomePageView extends Component {
         fetchAlbumListRequest();
         fetchPageHeaderRequest();
 
-        let path = this.props.location;
-        console.log('Path:', path);
+        PubSub.publish('sendPathName',this.props.location.pathname);
+    }
+    componentWillUnmount(){
+
+        PubSub.publish('sendPathName','Home dismissed');
     }
     render() {
         const {

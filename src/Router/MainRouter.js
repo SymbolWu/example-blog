@@ -11,6 +11,7 @@ import PhotographContainer from '../Containers/PhotographContainer'
 import AlbumDetailContainer from '../Containers/AlbumDetailContainer'
 
 import AboutMePageView from '../Components/AboutMe/AboutMePageView'
+import NotFoundPageView from '../Components/Public/NotFoundPageView'
 
 class MainRouter extends Component {
     render() {
@@ -34,6 +35,10 @@ class MainRouter extends Component {
                  * About route
                  */}
                 <Route path={routePath.ABOUTME_PATH} component={AboutMePageView} />
+
+                <Route path={routePath.ABOUTME_PATH} component={AboutMePageView} />
+
+                <Route  component={NotFoundPageView} />
             </Switch>
         )
     }

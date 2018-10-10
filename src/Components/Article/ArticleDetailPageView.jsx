@@ -24,6 +24,7 @@ class ArticleDetailPageView extends Component {
             content: '',
             description: ''
         }, true);
+        console.log('this.props.location.pathname:',this.props.location.pathname);
     }
     componentDidMount() {
         const { fetchSingleArticle } = this.props;
