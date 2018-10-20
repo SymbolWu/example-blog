@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Masonry from 'react-masonry-component'
+import {imageLinkArray} from '../../Constants/ThirdLink'
 
 class AlbumDetailPageView extends Component {
     static propTypes = {
@@ -60,10 +61,17 @@ class AlbumDetailPageView extends Component {
                     imagesLoadedOptions={{ background: '.my-bg-image-el' }} // default {}
                 >
                     {
-                        picList.map((item, index) => {
+                        // picList.map((item, index) => {
+                        //     return (
+                        //         <div key={index} className='picItem'>
+                        //             <img src={item.picURL} alt={item.id} />
+                        //         </div>
+                        //     )
+                        // })
+                        imageLinkArray.map((item, index) => {
                             return (
                                 <div key={index} className='picItem'>
-                                    <img src={item.picURL} alt={item.id} />
+                                    <img src={item} alt={item} />
                                 </div>
                             )
                         })
