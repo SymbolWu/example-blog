@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Masonry from 'react-masonry-component'
-import {imageLinkArray} from '../../Constants/ThirdLink'
+import { imageLinkArray } from '../../Constants/ThirdLink'
+import { Row, Col, Grid } from 'react-bootstrap'
 
 class AlbumDetailPageView extends Component {
     static propTypes = {
@@ -52,34 +53,45 @@ class AlbumDetailPageView extends Component {
                         </section>
                     </header>
                 </div>
-                <Masonry
-                    className={'my-gallery-class'} // default ''
-                    elementType={'div'} // default 'div'
-                    options={{ transitionDuration: 0 }} // default {}
-                    disableImagesLoaded={false} // default false
-                    updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-                    imagesLoadedOptions={{ background: '.my-bg-image-el' }} // default {}
-                >
-                    {
-                        // picList.map((item, index) => {
-                        //     return (
-                        //         <div key={index} className='picItem'>
-                        //             <img src={item.picURL} alt={item.id} />
-                        //         </div>
-                        //     )
-                        // })
-                        imageLinkArray.map((item, index) => {
-                            return (
-                                <div key={index} className='picItem'>
-                                    <img src={item} alt={item} />
-                                </div>
-                            )
-                        })
-                    }
-                </Masonry>
+
+                <Grid>
+
+                    <Row className="show-grid">
+                        {/* <Masonry
+                            className={'my-gallery-class'} // default ''
+                            elementType={'div'} // default 'div'
+                            options={{ transitionDuration: 1 }} // default {}
+                            disableImagesLoaded={false} // default false
+                            updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+                            imagesLoadedOptions={{ background: '.my-bg-image-el' }} // default {}
+                        > */}
+                            {
+                                // picList.map((item, index) => {
+                                //     return (
+                                //         <div key={index} className='picItem'>
+                                //             <img src={item.picURL} alt={item.id} />
+                                //         </div>
+                                //     )
+                                // })
+                                imageLinkArray.map((item, index) => {
+                                    return (
+
+                                        <Col xs={12} sm={6} md={4} lg={3} key={index}>
+                                            {/* <div key={index} className='picItem'> */}
+                                            <img src={item} alt={item} />
+                                            {/* </div> */}
+                                        </Col>
+
+                                    )
+                                })
+                            }
+                        {/* </Masonry> */}
+                    </Row>
+
+                </Grid>
+
 
             </div>
-
     }
 }
 
