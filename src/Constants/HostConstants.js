@@ -6,7 +6,8 @@ let host = '';
 let env = '';
 switch (process.env.Text[0]) {
     case MOCK:
-        host = 'http://mock/test/';
+        // host = 'http://mock/test/';
+        host = '';
         env = 0;
         break;
     case DEVSER:
