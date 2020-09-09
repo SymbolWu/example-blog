@@ -1,6 +1,4 @@
 The project is a personal blog and will be a SPA.
-## Project demo 
- [Web Link:https://symbolwu.github.io/#/](https://symbolwu.github.io/#/) 
 ## Main Library
 
 - React.js
